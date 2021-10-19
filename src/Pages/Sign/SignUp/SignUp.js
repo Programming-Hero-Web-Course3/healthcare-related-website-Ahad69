@@ -1,15 +1,27 @@
 import React from 'react';
 import {  faGoogle  } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
+import { Link , useLocation , useHistory} from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 
 const SignUp = () => {
     const {handleRegister, 
         emailHandler , 
         passwordHandler, 
-        handleResetPassword , signUpWithGoogle , error}= useAuth()
+        handleResetPassword , createNewUser , signUpWithGoogle , error}= useAuth()
     
+        const location = useLocation()
+        const history = useHistory()
+        const redirect = location.state?.from || '/home'
+        
+
+        const handleGoogle = () =>{
+            signUpWithGoogle()
+            .then(result =>{
+                history.push(redirect)
+            })
+        }
+
     return (
         <div className="login-form">
         <form onSubmit={handleRegister}>
@@ -28,8 +40,8 @@ const SignUp = () => {
             </div>
             <button onClick={handleResetPassword}>Reset Password</button>
         </form>
-        <p>{error}</p>
-        <button className="btn btn-secondary  rounded-pill" onClick={signUpWithGoogle}> <FontAwesomeIcon icon={faGoogle} /> Google</button>
+        <p className="text-danger mt-5 fw-bold">{error}</p>
+        <button className="btn btn-secondary  rounded-pill" onClick={handleGoogle}> <FontAwesomeIcon icon={faGoogle} /> Google</button>
         <Link to="/login"> <h5>Already Register ?</h5></Link>
     </div>
     

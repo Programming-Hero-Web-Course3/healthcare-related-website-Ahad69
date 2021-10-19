@@ -51,7 +51,7 @@ const HomeDoctors = () => {
                             </div>
                             </Carousel.Item>
                     </Carousel>
-                 <Link to="/onlinedoctor"><Button className="ms-3 mt-3 fw-bold px-5 py-3 rounded-pill" variant="outline-info">More</Button></Link>
+                 <Link to={`/onlinedoctor/${service.id}`}><Button className="ms-3 mt-3 fw-bold px-5 py-3 rounded-pill" variant="outline-info">More</Button></Link>
                 </div>
                 )
         }

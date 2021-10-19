@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { getAuth   ,signOut,onAuthStateChanged, signInWithPopup, sendEmailVerification , sendPasswordResetEmail , signInWithEmailAndPassword ,  GoogleAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth , GithubAuthProvider  ,FacebookAuthProvider  ,signOut,onAuthStateChanged, signInWithPopup, sendEmailVerification , sendPasswordResetEmail , signInWithEmailAndPassword ,  GoogleAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import authentication from '../Pages/Firebase/Firebase.init';
 
@@ -15,10 +15,21 @@ const useFirebase = () => {
   const [ isLogin , setIsLogin ] = useState(false)
 
   const provider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
+  const facebookProvider = new FacebookAuthProvider();
 
 
+  // sign up with google 
   const signUpWithGoogle =()=>{
    return signInWithPopup(auth, provider)
+  .then(result => {
+    setUser(result.user)
+   })
+   
+  }
+  // sign up with Gothub 
+  const signUpWithGitHub =()=>{
+   return signInWithPopup(auth, githubProvider)
   .then(result => {
     setUser(result.user)
    })
@@ -111,12 +122,14 @@ useEffect(()=>{
     user,
     toggleLogin,
     isLogin,
+    createNewUser,
     logOut,
     handleRegister, 
     emailHandler, 
     passwordHandler , 
     handleResetPassword , 
-     signUpWithGoogle, error
+    signUpWithGitHub,
+    signUpWithGoogle, error
   }
 };
 

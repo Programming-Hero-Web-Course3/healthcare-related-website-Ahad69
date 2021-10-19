@@ -37,11 +37,11 @@ const Header = () => {
                     user.email ?   <button className="btn btn-danger" onClick={logOut}>Log Out</button> : 
                         <div>
                             <Link className="login-button" to="/login">Login</Link>
-                            <Link to="/register"><Button className="ms-3 fw-bold rounded-pill" variant="outline-info">Sign Up</Button></Link>
+                            <Link to="/register"><Button className="ms-3 fw-bold rounded-pill" variant="outline-danger">Sign Up</Button></Link>
                         </div>
                     }
                 <Navbar.Text>
-                <img className="header-img"  src={user?.photoURL} alt="" />
+                <img className="header-img ms-2 rounded-circle"  src={user?.photoURL} alt="" />
                 </Navbar.Text>
             </Navbar.Collapse>
             </Container>

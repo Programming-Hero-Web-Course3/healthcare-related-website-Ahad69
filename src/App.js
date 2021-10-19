@@ -62,7 +62,7 @@ function App() {
           <Route>
             <Confirmation></Confirmation>
           </Route>
-       
+
           <Route path="*">
             <NotFound></NotFound>
           </Route>

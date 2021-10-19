@@ -59,9 +59,9 @@ const SingleDocs = () => {
         <br />
         <input className="input m-3 p-2 w-25 rounded-pill" defaultValue="Deliver To Door" {...register("state", { required: true })} />
         <br />
-        <input className="input m-3 p-2 w-25 rounded-pill" defaultValue="Hosen Pur , Lal Mosjid , Sirajgonj " {...register("address", { required: true })} /> 
+        <input className="input m-3 p-2 w-25 rounded-pill" placeholder="Hosen Pur , Lal Mosjid , Sirajgonj " {...register("address", { required: true })} /> 
         <br />
-        <input className="input m-3 p-2 w-25 rounded-pill" defaultValue="01790156861" {...register("Number", { required: true })} /> 
+        <input className="input m-3 p-2 w-25 rounded-pill" placeholder="01******" {...register("Number", { required: true })} /> 
         <br />
         
         <Link  to="/confirmation"  className="btn btn-danger mt-5 mb-5" > Confirm Appoinment</Link>
