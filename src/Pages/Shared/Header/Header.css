@@ -1,0 +1,22 @@
+.bg{
+    background: #24a0ce;
+    height: 120px;
+    font-size: 20px;
+    
+}
+.nav {
+    position: relative;
+}
+.nav::after{
+    content: '';
+    background:linear-gradient(to left ,#eeeb50,#e7a73f);
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+}
+.nav:hover::after{
+    width: 100%;
+} 

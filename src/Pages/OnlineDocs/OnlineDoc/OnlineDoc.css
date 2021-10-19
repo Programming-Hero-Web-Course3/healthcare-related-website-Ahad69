@@ -1,0 +1,17 @@
+.doc{
+    height: 450px;
+    border-radius: 30px;
+    border: 1px solid rgb(224, 202, 202);
+   background: linear-gradient(to left , white , rgb(202, 200, 200));
+   
+    
+}
+.doc:hover{
+    background: linear-gradient(to right , white , rgb(221, 220, 220));
+    /* transform: scale(1.02); */
+    box-shadow: 1px 1px 30px 1px;
+}
+
+.visit{
+    margin-top: 20px;
+}

@@ -1,0 +1,21 @@
+.frDocs{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-gap: 50px;
+}
+@media only screen and (max-width:992px) {
+.frDocs{
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+}   
+}
+@media only screen and (max-width:668px) {
+.frDocs{
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+}   
+}
+.title{
+    margin-top: 150px;
+}

@@ -1,0 +1,24 @@
+.homeServices{
+    display: grid;
+    grid-template-columns:repeat( 3 ,1fr); 
+    grid-gap: 50px; 
+}
+.homeService{
+        background: white;
+        height: 450px;
+        border: 0;
+        
+}
+.homeService:hover{
+        transform: translateY(-15px);
+        
+}
+
+@media only screen and (max-width:992px)  {
+
+    .homeServices{
+        display: grid;
+        grid-template-columns:repeat( 1 ,1fr); 
+        grid-gap: 20px; 
+    }  
+}

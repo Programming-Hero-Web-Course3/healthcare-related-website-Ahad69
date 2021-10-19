@@ -1,0 +1,22 @@
+.homeDortors{
+    display: grid;
+    grid-template-columns:repeat( 3 ,1fr); 
+    grid-gap: 50px; 
+}
+.homeDoctor{
+        background: white;
+        height: 450px;
+        border-radius: 50px;
+        border: 0;
+        box-shadow: 1px 1px 30px 1px;
+}
+
+@media only screen and (max-width:992px)  {
+
+    .homeDortors{
+        display: grid;
+        grid-template-columns:repeat( 1 ,1fr); 
+        grid-gap: 20px; 
+    }  
+}
+

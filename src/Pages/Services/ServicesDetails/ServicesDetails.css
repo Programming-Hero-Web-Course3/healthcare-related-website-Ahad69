@@ -1,0 +1,16 @@
+.single{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 150px;
+}
+.add-cart-btn{
+    
+    height: 20px;
+    font-size: 20px;
+    border-radius: 50px;
+    
+}
+.bg-danger{
+    border: 0px;
+    border-radius: 50px;
+}
