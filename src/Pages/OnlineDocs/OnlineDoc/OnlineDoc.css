@@ -15,8 +15,3 @@
 .visit{
     margin-top: 20px;
 }
-@media only screen and (max-width:992px) {
-    .doc{
-        width: 200px;
-    }
-}

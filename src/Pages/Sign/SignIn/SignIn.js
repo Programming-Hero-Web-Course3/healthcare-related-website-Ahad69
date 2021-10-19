@@ -36,19 +36,7 @@ const SignIn = () => {
     
     return (
         <div className="login-form">
-            {isLogin ? <form onSubmit={handleRegister}>
-            <div className="m-5">
-            <h1>Login</h1>
-                <input onBlur={emailHandler} className="input m-3 p-2 w-25 rounded-pill" type="email" placeholder="Email" required/>
-                <br />
-                <input onBlur={passwordHandler} className="input m-3 p-2 w-25 rounded-pill" type="password" placeholder="Password" required/>
-                <br />
-                <br />
-                <br />
-                <input className="input m-3 p-2 text-white fw-bold fs-5  w-25 bg-danger" type="submit" value="Submit" />
-                
-            </div>
-        </form> : <form onSubmit={handleRegister}>
+            {isLogin ?  <form onSubmit={handleRegister}>
             <div className="m-5">
                 <h1>Registration</h1>
                 <input onBlur={emailHandler} className="input m-3 p-2 w-25 rounded-pill" type="text" placeholder="First Name" required/>
@@ -63,7 +51,19 @@ const SignIn = () => {
                 
             </div>
             
-        </form>}
+        </form>:<form onSubmit={handleRegister}>
+            <div className="m-5">
+            <h1>Login</h1>
+                <input onBlur={emailHandler} className="input m-3 p-2 w-25 rounded-pill" type="email" placeholder="Email" required/>
+                <br />
+                <input onBlur={passwordHandler} className="input m-3 p-2 w-25 rounded-pill" type="password" placeholder="Password" required/>
+                <br />
+                <br />
+                <br />
+                <input className="input m-3 p-2 text-white fw-bold fs-5  w-25 bg-danger" type="submit" value="Submit" />
+                
+            </div>
+        </form> }
         <input onChange={toggleLogin} type="checkbox" name="" id="check"/>
         
         <label className="ms-1" htmlFor="check">Already Registered ??</label>
