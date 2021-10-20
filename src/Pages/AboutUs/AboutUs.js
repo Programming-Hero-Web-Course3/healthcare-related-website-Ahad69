@@ -3,28 +3,29 @@ import './AboutUs.css'
 
 const AboutUs = () => {
    return (
-        <div>
-            <div className="container about-top">
-            <div className="right-content m-5 p-5">
-                    <img  src="https://www.usnews.com/dims4/USNEWS/2cf9b0b/2147483647/crop/2000x1335%2B0%2B0/resize/300x300%3E/quality/85/?url=http%3A%2F%2Fmedia.beam.usnews.com%2F65%2F62%2Fc9cb60d24ac89d56462b1228574a%2F201009-codingcomputer-stock.jpg" alt="" />
+        <div className="container about">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                <img  src="https://www.usnews.com/dims4/USNEWS/2cf9b0b/2147483647/crop/2000x1335%2B0%2B0/resize/300x300%3E/quality/85/?url=http%3A%2F%2Fmedia.beam.usnews.com%2F65%2F62%2Fc9cb60d24ac89d56462b1228574a%2F201009-codingcomputer-stock.jpg" alt="" />
                 </div>
-                <div className="left-content m-5 p-5 ">
-                    <h1 className="fw-bold">Our Vision & Values</h1>
+                <div class="col-lg-6 col-sm-12">
+                <h1 className="fw-bold">Our Vision & Values</h1>
                     <p className="fw-bold">We aspire to become a world leader in advancing businesses through digital means. Customer satisfaction, openness, innovation, teamwork and growth, are the core values behind our company, and continue to reflect who we are, how we work, and what we strive for.</p>
                 </div>
             </div>
             <hr />
             <hr />
             <hr />
-            <div className="container mt-5 about-bottom">
-                <div className="left-content ">
-                    <img width="400px" src="https://res.cloudinary.com/practicaldev/image/fetch/s--QEvwbzaE--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6ae5dzbl9t87d5arre92.jpg" alt="" />
-                </div>
-                <div className="right-content m-5 p-5">
-                    <h1 className="fw-bold">Our Purpose & Philosophy</h1>
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                <h1 className="fw-bold">Our Purpose & Philosophy</h1>
                     <p className="fw-bold">We’re inspired by our clients and work to advance their business by innovating everything digital. We’re endless innovators, constantly looking for new ways to connect the dots and connect people. We become part of your team, true partners with a sustained commitment to your business goals. </p>
                 </div>
+                <div class="col-lg-6 col-sm-12">
+                <img width="350px" src="https://res.cloudinary.com/practicaldev/image/fetch/s--QEvwbzaE--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6ae5dzbl9t87d5arre92.jpg" alt="" />
+                </div>
             </div>
+            
             <hr />
             <hr />
             <hr />
@@ -75,6 +76,7 @@ const AboutUs = () => {
                     People's Choice Award: Digital
                 </p>
                 </div>
+                <hr className="bg-danger p-2" />
                 <div className="right-content">
                     <h1 className="fw-bold">Growth & Expansion</h1>
                     <p>2021 

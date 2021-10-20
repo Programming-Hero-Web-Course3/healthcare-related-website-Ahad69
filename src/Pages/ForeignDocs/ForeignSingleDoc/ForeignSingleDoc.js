@@ -39,8 +39,8 @@ const ForeignSingleDoc = () => {
                <p>{service?.profession}</p>
                <br />
                <div className="add-cart-btn ms-5  text-center">
-                    <div className="m-5">
-                     <h1>$ <span id="phone-total">{service?.fees}</span></h1></div>
+                    <div className="">
+                     <h1>$ <span>{service?.fees}</span></h1></div>
                 </div>
                <br /> <br />
                

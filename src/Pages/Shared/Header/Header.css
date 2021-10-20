@@ -20,3 +20,9 @@
 .nav:hover::after{
     width: 100%;
 } 
+
+.login-button{
+    text-decoration: none;
+    color: blue;
+    font-weight: 800;
+}

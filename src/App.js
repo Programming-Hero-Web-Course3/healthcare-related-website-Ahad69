@@ -12,7 +12,6 @@ import AuthProvider from './Hooks/AuthProvider';
 import PrivateRoute from './Hooks/PrivateRoute';
 import ServicesDetails from './Pages/Services/ServicesDetails/ServicesDetails';
 import SingleDocs from './Pages/OnlineDocs/SingleDocs/SingleDocs';
-import ForeignDoctors from './Pages/Home/ForeignDoctors/ForeignDoctors';
 import ForeignDocs from './Pages/ForeignDocs/ForeignDocs/ForeignDocs';
 import ForeignSingleDoc from './Pages/ForeignDocs/ForeignSingleDoc/ForeignSingleDoc';
 import Confirmation from './Pages/Confirmation/Confirmation';

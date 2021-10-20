@@ -6,21 +6,24 @@ import './Service.css'
 const Service = ({service}) => {
     const{title , id,  img , author, description} = service
     return (
-        <div>
-    <div className="service p-2">
-        <div className="d-flex">
-            <div>
-            <img width="250px" src={img} alt="" />
+    <div>
+        <div className="card mb-3 p-3 service">
+             <div className="row g-0">
+                <div className="col-md-4">
+                <img src={img} className="img-fluid rounded-start" alt="..."/>
+                
+                </div>
+            <div className="col-md-8">
+                <div className="card-body">
+                    <h5 className="card-title">{title}</h5>
+                    <p className="card-text">{description.slice(0,100)}</p>
+                    <p className="card-text"><small className="text-muted">{author}</small></p>
+                </div>
             </div>
-            <div className="text-start p-2">
-            <h1 className="mt-4 text-danger">{title}</h1>
-            <p>By  : {author}</p>
-            <h5>{description.slice(0,50)} .....</h5>
-            </div>
-        </div>
-         <Link to={ `/services/${id}`}><Button className="ms-3 fw-bold mt-4 px-5 py-3 rounded-pill" variant="outline-info" >Click Here For More</Button></Link>
-        </div>
-        </div>
+            <Link to={`/services/${id}`} ><Button className="ms-3 fw-bold mt-2 px-3 py-3 rounded-pill" variant="outline-success">Appoinment</Button></Link>
+         </div>
+    </div>
+    </div>
     );
 };
 

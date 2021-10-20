@@ -15,26 +15,8 @@ const useFirebase = () => {
   const [ isLogin , setIsLogin ] = useState(false)
 
   const provider = new GoogleAuthProvider();
-  const githubProvider = new GithubAuthProvider();
-  const facebookProvider = new FacebookAuthProvider();
 
 
-  // sign up with google 
-  const signUpWithGoogle =()=>{
-   return signInWithPopup(auth, provider)
-  .then(result => {
-    setUser(result.user)
-   })
-   
-  }
-  // sign up with Gothub 
-  const signUpWithGitHub =()=>{
-   return signInWithPopup(auth, githubProvider)
-  .then(result => {
-    setUser(result.user)
-   })
-   
-  }
   const logOut =()=>{
     signOut(auth)
     .then(() => {
@@ -50,8 +32,8 @@ useEffect(()=>{
 },[])
 
 
-  const handleRegister =(e)=>{
-    e.preventDefault();
+  const handleRegister =()=>{
+   
     console.log(email , password)
     if(password.length <6 ){
       setError('pass must be 6')
@@ -70,12 +52,21 @@ useEffect(()=>{
     }
     
   }
+  // sign up with google 
+  const signUpWithGoogle =()=>{
+    return signInWithPopup(auth, provider)
+   .then(result => {
+    
+     setUser(result.user)
+    })
+    
+   }
+
   const loginProsses = (email , password) =>{
-     signInWithEmailAndPassword(auth, email, password)
+   signInWithEmailAndPassword(auth, email, password)
     .then(result => {
-      const user = result.user;
+      console.log("this is result" ,result)
       setUser(result.user)
-      console.log(user)
       setError('')
     })
     .catch((error) => {
@@ -97,7 +88,7 @@ useEffect(()=>{
   const verifyEmail = () =>{
     sendEmailVerification(auth.currentUser)
     .then(result =>{
-      console.log(result)
+      
     })
   }
   const toggleLogin =e =>{
@@ -125,10 +116,10 @@ useEffect(()=>{
     createNewUser,
     logOut,
     handleRegister, 
-    emailHandler, 
+    emailHandler,
+    loginProsses, 
     passwordHandler , 
     handleResetPassword , 
-    signUpWithGitHub,
     signUpWithGoogle, error
   }
 };

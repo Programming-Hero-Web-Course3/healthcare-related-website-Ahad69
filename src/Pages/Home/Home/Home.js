@@ -1,8 +1,8 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import ForeignDoctors from '../ForeignDoctors/ForeignDoctors';
-import HomeDoctors from '../HomeDoctors/HomeDoctors';
 import HomeSercvices from '../HomeServices/HomeSercvices';
+import Machine from '../Machine/Machine';
+import Provided from '../Provided/Provided';
 import './Home.css'
 
 const Home = () => {
@@ -10,8 +10,8 @@ const Home = () => {
         <div className="home">
             <Banner></Banner>
             <HomeSercvices></HomeSercvices>
-            <HomeDoctors></HomeDoctors>
-            <ForeignDoctors></ForeignDoctors>
+            <Machine></Machine>
+            <Provided></Provided>
         </div>
     );
 };

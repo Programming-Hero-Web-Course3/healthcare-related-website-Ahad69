@@ -1,17 +1,10 @@
 .service{
-    height: 450px;
+    box-shadow: 1px 1px 10px 1px;
     border-radius: 30px;
-    border: 1px solid rgb(224, 202, 202);
-   background: linear-gradient(to left , white , rgb(202, 200, 200));
-   
-    
+
 }
 .service:hover{
     background: linear-gradient(to right , white , rgb(221, 220, 220));
-    /* transform: scale(1.02); */
+    transform: scale(1.02);
     box-shadow: 1px 1px 30px 1px;
-}
-
-.visit{
-    margin-top: 20px;
 }

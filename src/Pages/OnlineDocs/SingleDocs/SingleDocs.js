@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
+import './SingleDocs.css'
 
 
 const SingleDocs = () => {
@@ -25,31 +26,29 @@ const SingleDocs = () => {
     const service = services.find(fd => fd.id == id )
     console.log(service)
     return (
-        <div>
-              <div className="single m-4">
-               <div>
-               <img width="500px" src={service?.img} alt="" />
-               </div>
-               <div className="ahad mt-5 ms-5">
-               <h1 className="text-danger">{service?.name}</h1>
-
-               <br />
-               <h5>{service?.spealist} </h5>
-               <br />
-               <br />
-               <p>{service?.profession}</p>
-               <br />
-               <div className="add-cart-btn ms-5  text-center">
-                    <div className="m-5">
-                     <h1>$ <span id="phone-total">{service?.fees}</span></h1></div>
+        <div className="single">
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                <img src={service?.img} class="img-fluid rounded-start" alt="..."/>
                 </div>
-               <br /> <br />
-               
-               <br /> <br />
-              
-               
-               </div>
+                <div class="col-md-8">
+                <div class="card-body">
+                <h1 className="text-danger">{service?.name}</h1>
+                <h5>{service?.spealist} </h5>
+                <br />
+                <br />
+                <br />
+                <h5>{service?.profession}</h5>
+                </div>
+                </div>
+            </div>
+            <h1><span className="span"> $ {service?.fees}</span></h1>
         </div>
+        <br />
+        <br />
+        <hr />
+        <br />
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
         <input className="input m-3 p-2 w-25 rounded-pill" defaultValue={user.displayName} {...register("example")} /> 
@@ -67,7 +66,7 @@ const SingleDocs = () => {
         <Link  to="/confirmation"  className="btn btn-danger mt-5 mb-5" > Confirm Appoinment</Link>
         </form>
         </div>
-        </div>
+    </div>
     );
 };
 

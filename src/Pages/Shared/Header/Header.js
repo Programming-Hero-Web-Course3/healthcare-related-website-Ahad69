@@ -10,7 +10,7 @@ const Header = () => {
     const {user , logOut} = useAuth()
     return (
         <div className="container mt-5">
-        <Navbar collapseOnSelect  fixed="top"  expand="lg" className="bg"  variant="light" >
+        <Navbar collapseOnSelect  fixed="top"   expand="lg" className="bg-light"  variant="dark" >
             <Container>
             <Navbar.Brand href="#home" className="text-warning fw-bold">
                 <img
@@ -23,7 +23,7 @@ const Header = () => {
     
                 <h3>Care Hospital Ltd.</h3>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" className="bg-dark" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="m-auto">
                 <Nav.Link className="text-dark nav  fw-bold" as={HashLink} to="/home">Home</Nav.Link>
@@ -36,7 +36,7 @@ const Header = () => {
                     {
                     user.email ?   <button className="btn btn-danger" onClick={logOut}>Log Out</button> : 
                         <div>
-                            <Link className="login-button" to="/login">Login</Link>
+                            <Link className="login-button " to="/login">Login</Link>
                             <Link to="/register"><Button className="ms-3 fw-bold rounded-pill" variant="outline-danger">Sign Up</Button></Link>
                         </div>
                     }
